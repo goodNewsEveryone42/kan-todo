@@ -3,7 +3,7 @@ import "./Column.scss";
 import Card from "../card/Card";
 
 export interface CardProps {
-  cardList: cardItem,
+  cardList: cardItem[],
 }
 
 export interface cardItem {
