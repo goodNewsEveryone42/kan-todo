@@ -1,8 +1,19 @@
-import * as actionTypes from "./actionTypes";
+export const GET_STATE = "GET_STATE";
 
-export function increment(amount: number): IAction {
+export type ActionTypes = typeof GET_STATE;
+
+export interface IAction {
+  type: ActionTypes;
+  payload: IPayload;
+}
+
+export interface IPayload {
+  amount: number;
+}
+
+export function getState(amount: number): IAction {
   return {
-    type: actionTypes.GET_STATE,
+    type: GET_STATE,
     payload: {
       amount
     }

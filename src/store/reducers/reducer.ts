@@ -1,10 +1,4 @@
-import {
-  INCREMENT,
-  DECREMENT,
-  IAction,
-  ActionTypes,
-  IPayload
-} from "./actions";
+import { IAction } from "../actions/action";
 
 export const initState = {
   list: [
@@ -32,9 +26,9 @@ export const initState = {
 };
 
 
-export function reducer(state = initState, action) {
+export function reducer(state = initState, action: IAction) {
   switch(action.type) {
-      case ACTION_1: return { value: action.value_1 };
+      case 'GET_STATE': return { value: action.value_1 };
       
       default: return state;
   }
