@@ -2,10 +2,10 @@ import React from 'react';
 import "./Card.scss";
 
 export interface CardProps {
-  card: Card
+  card: CardInfo
 }
 
-export interface Card {
+export interface CardInfo {
   id: number,
   text: string
 }
