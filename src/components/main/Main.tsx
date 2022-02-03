@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 import "./Main.scss";
 import Column from '../column/Column';
+import ButtonCreate from "../create-card/ButtonCreate";
 
 const MainPage: React.FunctionComponent = () => {
   const [cards, setCards] = useState([
@@ -38,7 +39,9 @@ const MainPage: React.FunctionComponent = () => {
   return (
     <div className="main">
       <div className="main__container">
-      {renderColumn()}
+        {renderColumn()}
+        <ButtonCreate 
+        title="Добавить еще одну колонку"/>
       </div>
     </div>
   )

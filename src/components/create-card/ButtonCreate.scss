@@ -1,0 +1,41 @@
+.button-create {
+  width: 272px;
+  height: 34px;
+  padding-left: 12px;
+  background-color: #DFE3E6;
+  border-radius: 3px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      color:#6B808C;
+    }
+  }
+
+  &__plus {
+    font-size: 25px;
+    line-height: 10px;
+  }
+
+  &__add-card {
+    margin-left: 5px;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  &__close {
+    font-size: 30px;
+    line-height: 10px;
+    transform: rotate(45deg);
+  }
+
+  &__add-button {
+    width: 147px;
+    height: 30px;
+    background-color: #39C071;
+    border-radius: 3px;
+  }
+}

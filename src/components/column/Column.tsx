@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Column.scss";
 import Card from "../card/Card";
+import ButtonCreate from "../create-card/ButtonCreate";
 
 export interface CardProps {
   cardList: cardItem[],
@@ -28,6 +29,9 @@ const Column:React.FunctionComponent<CardProps> = ({ cardList }) => {
         <p className="column__title">План на месяц</p>
         {renderCard()}
       </div>
+      <ButtonCreate
+        title="Добавить еще одну карточку"
+      />
     </div>
   )
 };

@@ -28,7 +28,7 @@ export const initState = {
 
 export function reducer(state = initState, action: IAction) {
   switch(action.type) {
-      case 'GET_STATE': return { value: action.value_1 };
+      case 'GET_STATE': return { value: action };
       
       default: return state;
   }
