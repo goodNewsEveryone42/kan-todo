@@ -28,7 +28,8 @@ export const initState = {
 
 export function reducer(state = initState, action: IAction) {
   switch(action.type) {
-      case 'GET_STATE': return { value: action };
+      case 'GET_STATE': return { ...state };
+      case 'SET_NEW_CARD': return { ...state };
       
       default: return state;
   }

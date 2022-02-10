@@ -1,12 +1,20 @@
 import React from 'react';
-import "./Card.scss";
+import "./InputField.scss";
 
-const InputField: React.FunctionComponent = () => {
+interface Props {
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const InputField: React.FunctionComponent<Props> = ({handleChange}) => {
 
   return (
     <div className="input-field">
       <label htmlFor="inputAddNewElement"></label>
-      <input type="text" id="inputAddNewElement" name="inputAddNewElement"/>
+      <input
+      type="textarea"
+      id="inputAddNewElement"
+      name="inputAddNewElement"
+      onChange={handleChange}/>
     </div>
   )
 };

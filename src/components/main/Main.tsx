@@ -1,31 +1,14 @@
-import { useState, useCallback } from 'react'
+import { useSelector } from "react-redux";
 import "./Main.scss";
 import Column from '../column/Column';
 import ButtonCreate from "../create-card/ButtonCreate";
 
+interface RootState {
+  list: []
+}
+
 const MainPage: React.FunctionComponent = () => {
-  const [cards, setCards] = useState([
-    [
-      {
-        id: 1,
-        text: 'Write a cool JS library',
-      },
-      {
-        id: 2,
-        text: 'Make it generic enough',
-      },
-    ],
-    [
-    {
-      id: 1,
-      text: 'Write a cool JS library',
-    },
-    {
-      id: 2,
-      text: 'Write a cool JS library',
-    },
-  ]
-  ])
+  const cards = useSelector((state: RootState) => state.list);
 
   const renderColumn = () => {
     return (
